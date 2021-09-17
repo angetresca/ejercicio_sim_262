@@ -7,9 +7,19 @@
         font-weight: 400;
         text-align: center;
     }
+
+    #contenedor-parametros-entrada{
+        border: 1px solid green;
+        padding: 1%;
+    }
+
+    #contenedor-parametros-entrada .input-group {
+        margin-top: 1%;
+    }
     
     #contenedor-boton {
-        margin: 1%;
+        text-align: center;
+        margin-top: 1%;
     }
     
     #contenedor-tabla {

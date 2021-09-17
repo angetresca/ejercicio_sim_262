@@ -21,18 +21,23 @@
 <body>
     <div id="colas">
         <h1>SIMULACIÓN - EJERCICIO 262</h1>
-        <div id="contenedor-parametros-entrada">
-            <!--TODO: agregar parámetros de entrada -->
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="param-1-addon">Param 1</span>
+        <div class="row" id="contenedor-parametros-entrada">
+            <!--TODO: agregar todos los parámetros de entrada -->
+            <div class="col-xs-4 container">
+                <div class="input-group">
+                    <label for="txt-desde">Reloj Desde</label>
+                    <input type="text" class="form-control" id="txt-desde">
                 </div>
-                <input type="text" class="form-control" aria-label="Param 1" aria-describedby="param-1-addon" id="param-1">
+                <div class="input-group">
+                    <label for="txt-hasta">Reloj Hasta</label>
+                    <input type="text" class="form-control" id="txt-hasta">
+                </div>
+            </div>
+            <div class="col-xs-12" id="contenedor-boton">
+                <button class="btn btn-primary btn-lg" id="btn-simular">Simular</button>
             </div>
         </div>
-        <div id="contenedor-boton">
-            <button class="btn btn-primary btn-lg" id="btn-simular">Simular</button>
-        </div>
+        
         <div id="contenedor-tabla">
             <table class="table table-striped" id="tbl-simulacion">
                 <thead>
