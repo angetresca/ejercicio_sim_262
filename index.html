@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 262</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+    <script type="text/javascript" src="js/clases/Cliente.js"></script>
+    <script type="text/javascript" src="js/clases/Servidor.js"></script>
+    <script type="text/javascript" src="js/clases/Vector.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+    <div id="colas">
+        <h1>SIMULACIÓN - EJERCICIO 262</h1>
+        <div id="contenedor-parametros-entrada">
+            <!--TODO: agregar parámetros de entrada -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="param-1-addon">Param 1</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Param 1" aria-describedby="param-1-addon" id="param-1">
+            </div>
+        </div>
+        <div id="contenedor-boton">
+            <button class="btn btn-primary btn-lg" id="btn-simular">Simular</button>
+        </div>
+        <div id="contenedor-tabla">
+            <table class="table table-striped" id="tbl-simulacion">
+                <thead>
+                    <tr>
+                        <th>Reloj</th>
+                        <th>Evento</th>
+                        <th>Random llamada</th>
+                        <th>Tiempo entre llamadas</th>
+                        <th>Proxima llamada</th>
+                        <th>Estado servidor</th>
+                        <th>Cola servidor</th>
+                        <th>Random fin atención</th>
+                        <th>Tiempo entre fin atención</th>
+                        <th>Fin atención</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

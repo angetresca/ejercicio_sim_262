@@ -1,0 +1,17 @@
+    body {
+        padding: 2%;
+    }
+    
+    h1 {
+        color: green;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    #contenedor-boton {
+        margin: 1%;
+    }
+    
+    #contenedor-tabla {
+        margin-top: 2%;
+    }
