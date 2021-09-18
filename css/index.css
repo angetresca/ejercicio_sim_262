@@ -16,6 +16,11 @@
     #contenedor-parametros-entrada .input-group {
         margin-top: 1%;
     }
+
+    #contenedor-parametros-entrada .input-group .form-control {
+        margin-top: 1%;
+        max-width: 15em;
+    }
     
     #contenedor-boton {
         text-align: center;

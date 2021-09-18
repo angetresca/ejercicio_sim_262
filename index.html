@@ -23,14 +23,34 @@
         <h1>SIMULACIÓN - EJERCICIO 262</h1>
         <div class="row" id="contenedor-parametros-entrada">
             <!--TODO: agregar todos los parámetros de entrada -->
-            <div class="col-xs-4 container">
+            <div class="col-xs-4 ">
                 <div class="input-group">
                     <label for="txt-desde">Reloj Desde</label>
-                    <input type="text" class="form-control" id="txt-desde">
+                    <input type="number" class="form-control" step="0.0001" min=0 id="txt-desde">
                 </div>
                 <div class="input-group">
                     <label for="txt-hasta">Reloj Hasta</label>
-                    <input type="text" class="form-control" id="txt-hasta">
+                    <input type="number" class="form-control" step="0.0001" min=0 id="txt-hasta">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <label for="txt-media-exponencial">Media dist. exponencial</label>
+                    <input type="number" class="form-control" step="0.0001" min=0 id="txt-media-exponencial">
+                </div>
+                <div class="input-group">
+                    <label for="txt-cola-maxima">Cola máxima</label>
+                    <input type="number" class="form-control" min=0 id="txt-cola-maxima">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <label for="txt-a-uniforme">Valor de A dist. uniforme</label>
+                    <input type="number" class="form-control" step="0.0001" min=0 id="txt-a-uniforme">
+                </div>
+                <div class="input-group">
+                    <label for="txt-b-uniforme">Valor de B dist. uniforme</label>
+                    <input type="number" class="form-control" step="0.0001" min=0 id="txt-b-uniforme">
                 </div>
             </div>
             <div class="col-xs-12" id="contenedor-boton">
