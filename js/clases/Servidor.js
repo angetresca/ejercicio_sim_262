@@ -13,6 +13,8 @@ class Servidor {
     this.rndFinAtencion = null;
     this.tiempoEntreFinAtencion = null;
     this.proximoFinAtencion = null;
+    this.acumuladoClientesTotales = 0;
+    this.acumuladoClientesNoAtendidos = 0;
   }
 
   generarRandomFinAtencion() {
@@ -61,11 +63,11 @@ class Servidor {
         this.aumentarCola();
       } else {
         // El cliente se va.
-        // TODO: aumentar contador clientes no atendidos
+        this.acumuladoClientesNoAtendidos++;
       }
     }
 
-    // TODO: Crear y aumentar contadores en cada caso
+    this.acumuladoClientesTotales++;
   }
 
   ejecutarFinAtencion(relojActual) {

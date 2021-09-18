@@ -5,22 +5,23 @@ const eventos = {
 };
 
 function iniciarSimulacion() {
-  //TODO: recibir los parametros de entrada
-  const relojDesde = 0;
-  const relojHasta = 2;
-  const media = 1.2;
-  const colaMaxima = 2;
-  const valorA = 0.75;
-  const valorB = 1.33;
+  //TODO: validar los parametros de entrada
+  const relojDesde = parseFloat($("#txt-desde").val());
+  const relojHasta = parseFloat($("#txt-hasta").val());
+  const media = parseFloat($("#txt-media").val());
+  const colaMaxima = parseInt($("#txt-cola-maxima").val());
+  const valorA = parseFloat($("#txt-a").val());
+  const valorB = parseFloat($("#txt-b").val());
 
   let vector = new Vector(relojDesde, media, colaMaxima, valorA, valorB);
-  console.log(vector.reloj);
-  
+
+  let primerFila = true;
+
   while (vector.reloj >= relojDesde && vector.reloj <= relojHasta) {
-    console.log(vector.reloj);
     // Si es la primer fila imprime y continua con la siguiente iteracion
-    if (vector.reloj == relojDesde) {
+    if (primerFila === true) {
       vector.imprimir();
+      primerFila = false;
       continue;
     }
 
@@ -39,11 +40,13 @@ function iniciarSimulacion() {
     // Imprime la fila
     vector.imprimir();
   }
+
+  // Imprime acumuladores al finalizar todas las vueltas
+  $("#resultado").text(`Cantidad clientes no atendidos: ${vector.servidor.acumuladoClientesNoAtendidos} Cantidad clientes totales: ${vector.servidor.acumuladoClientesTotales} `);
+  $("#contenedor-resultado").css("display", "block");
 }
 
 $(document).ready(function () {
-  //TODO: tomar datos parámetro, validarlos y pasarselos a iniciarSimulacion()
-
   $("#btn-simular").click(function () {
     // Al hacer click en el botón simular, se limpia la tabla y se inicia la simulación
     $("#tbl-simulacion tbody").empty();
